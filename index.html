@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Animation CSS | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيق أيقونة واتساب */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-float ion-icon {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-light"></div>
+    <div class="login-box">
+        <form onsubmit="validateForm(); return false;">
+            <input type="checkbox" class="input-check" id="input-check">
+            <label for="input-check" class="toggle">
+                <span class="text off"></span>
+                <span class="text on"></span>
+            </label>
+            <div class="light"></div>
+
+            <!-- تصغير خط المكتبة الإلكترونية ورفعها للأعلى قليلاً -->
+            <h2 style="font-size: 24px; font-family: 'Cairo Black'; margin-top: -20px;">المكتبة الإلكترونية جامعة دار السلام</h2>
+
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+                <div class="input-line"></div>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+                <div class="input-line"></div>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+            </div>
+        </form>
+    </div>
+
+    <!-- أيقونة واتساب للدعم الفني -->
+    <a href="https://wa.me/123456789" class="whatsapp-float" target="_blank">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <span>الدعم الفني</span>
+    </a>
+
+    <script>
+        function validateForm() {
+            const emails = [
+                 "emanblshekh@studentmail.darelsalam-u.edu.ly",
+                 "abdelrhmanemad@studentmail.darelsalam-u.edu.ly",
+                 "abdelrhmankhaled@studentmail.darelsalam-u.edu.ly",
+                 "abdelraoufalmansory@studentmail.darelsalam-u.edu.ly",
+                 "abdulrahmanfayez@darelsalam-u.edu.ly",
+                 "ahmedmosttafa@studentmail.darelsalam-u.edu.ly",
+                 "ahmedmohsen@studentmail.darelsalam-u.edu.ly",
+                 "alaaashour@studentmail.darelsalam-u.edu.ly",
+                 "alaayousef@studentmail.darelsalam-u.edu.ly",
+                 "alshareefhaweel@studentmail.darelsalam-u.edu.ly",
+                 "amiramohamed@studentmail.darelsalam-u.edu.ly",
+                 "amnasalem@studentmail.darelsalam-u.edu.ly",
+                 "amrabdalla@studentmail.darelsalam-u.edu.ly",
+                 "bushraali@darelsalam-u.edu.ly",
+                 "bushraatia@studentmail.darelsalam-u.edu.ly",
+                 "boshraebrik@studentmail.darelsalam-u.edu.ly",
+                 "drgummaelmusmari@darelsalam-u.edu.ly",
+                 "duaaboudahab@studentmail.darelsalam-u.edu.ly",
+                 "ebrahimalhdadd@studentmail.darelsalam-u.edu.ly",
+                 "emadmikael@darelsalam-u.edu.ly",
+                 "emanblshekh@studentmail.darelsalam-u.edu.ly",
+                 "emtenanalzlitny@studentmail.darelsalam-u.edu.ly",
+                 "esraaalnaji@studentmail.darelsalam-u.edu.ly",
+                 "ezuldeenmohammed@studentmail.darelsalam-u.edu.ly",
+                 "farehamohammed@studentmail.darelsalam-u.edu.ly",
+                 "faridelmusmari@darelsalam-u.edu.ly",
+                 "fariskhaled@studentmail.darelsalam-u.edu.ly",
+                 "fatimaalzahra@studentmail.darelsalam-u.edu.ly",
+                 "fatimasalama@studentmail.darelsalam-u.edu.ly",
+                 "fatmaelzahraa@studentmail.darelsalam-u.edu.ly",
+                 "fawzisaeed@studentmail.darelsalam-u.edu.ly",
+                 "gamalalzawam@studentmail.darelsalam-u.edu.ly",
+                 "ghofranbolhasea@studentmail.darelsalam-u.edu.ly",
+                 "hadeelfaiz@studentmail.darelsalam-u.edu.ly",
+                 "hadeelsaleh@studentmail.darelsalam-u.edu.ly",
+                 "hadeelmaziq@studentmail.darelsalam-u.edu.ly",
+                 "habebaahmed@studentmail.darelsalam-u.edu.ly",
+                 "hagarmahdy@studentmail.darelsalam-u.edu.ly",
+                 "hasnaakhaled@studentmail.darelsalam-u.edu.ly",
+                 "hasnaareda@studentmail.darelsalam-u.edu.ly",
+                 "hazemkamel@studentmail.darelsalam-u.edu.ly",
+                 "hossamhassan@studentmail.darelsalam-u.edu.ly",
+                 "jadallahelmusmari@darelsalam-u.edu.ly",
+                 "jawadsaleh@studentmail.darelsalam-u.edu.ly",
+                 "jawwadali@studentmail.darelsalam-u.edu.ly",
+                 "julianabdallah@studentmail.darelsalam-u.edu.ly",
+                 "khaledbelkasem@darelsalam-u.edu.ly",
+                 "khalidibrahim@studentmail.darelsalam-u.edu.ly",
+                 "khadeijafaraj@studentmail.darelsalam-u.edu.ly",
+                 "koboulsaad@studentmail.darelsalam-u.edu.ly",
+                 "lailahussein@studentmail.darelsalam-u.edu.ly",
+                 "manskhamis@darelsalam-u.edu.ly",
+                 "maryamsoliman@studentmail.darelsalam-u.edu.ly",
+                 "mawadaalobidy@studentmail.darelsalam-u.edu.ly",
+                 "mawadabakar@studentmail.darelsalam-u.edu.ly",
+                 "mazyadalrashed@studentmail.darelsalam-u.edu.ly",
+                 "menakhaled@studentmail.darelsalam-u.edu.ly",
+                 "mennamohamed@studentmail.darelsalam-u.edu.ly",
+                 "moadhamad@studentmail.darelsalam-u.edu.ly",
+                 "moatazalaa@studentmail.darelsalam-u.edu.ly",
+                 "mohamedabdelnaby@studentmail.darelsalam-u.edu.ly",
+                 "mohamedamr@studentmail.darelsalam-u.edu.ly",
+                 "mohamedelejeli@studentmail.darelsalam-u.edu.ly",
+                 "mohamedfayez@studentmail.darelsalam-u.edu.ly",
+                 "mohammedfathy@studentmail.darelsalam-u.edu.ly",
+                 "mohammedibrahim@studentmail.darelsalam-u.edu.ly",
+                 "mohammednaser@studentmail.darelsalam-u.edu.ly",
+                 "moustafaibrahim@studentmail.darelsalam-u.edu.ly",
+                 "mftahabdalsalam@studentmail.darelsalam-u.edu.ly",
+                 "nadamostafa@studentmail.darelsalam-u.edu.ly",
+                 "nadataha@studentmail.darelsalam-u.edu.ly",
+                 "nouranafia@studentmail.darelsalam-u.edu.ly",
+                 "nurasalem@studentmail.darelsalam-u.edu.ly",
+                 "omar@darelsalam-u.edu.ly",
+                 "omaryusef@studentmail.darelsalam-u.edu.ly",
+                 "omarsameh@studentmail.darelsalam-u.edu.ly",
+                 "omarmoussa@studentmail.darelsalam-u.edu.ly",
+                 "osamaelmusmari@darelsalam-u.edu.ly",
+                 "rahmaemad@studentmail.darelsalam-u.edu.ly",
+                 "rahmamahmoud@studentmail.darelsalam-u.edu.ly",
+                 "rahfweera@studentmail.darelsalam-u.edu.ly",
+                 "razanamer@studentmail.darelsalam-u.edu.ly",
+                 "reemmohamed@studentmail.darelsalam-u.edu.ly",
+                 "retajnoraldeen@studentmail.darelsalam-u.edu.ly",
+                 "retajmousa@studentmail.darelsalam-u.edu.ly",
+                 "roaiaeblaoo@studentmail.darelsalam-u.edu.ly",
+                 "sabrenrajab@darelsalam-u.edu.ly",
+                 "sabrysameh@studentmail.darelsalam-u.edu.ly",
+                 "safahamida@darelsalam-u.edu.ly",
+                 "salimaeshrisher@studentmail.darelsalam-u.edu.ly",
+                 "saraehab@studentmail.darelsalam-u.edu.ly",
+                 "shahdmostafa@studentmail.darelsalam-u.edu.ly",
+                 "shefaajumma@studentmail.darelsalam-u.edu.ly",
+                 "wedadfadlallah@studentmail.darelsalam-u.edu.ly",
+                 "wesalahmad@studentmail.darelsalam-u.edu.ly",
+                 "yasminemoussa@darelsalam-u.edu.ly",
+                 "yaseenosama@studentmail.darelsalam-u.edu.ly",
+                 "yousefhamdy@studentmail.darelsalam-u.edu.ly",
+                 "yousifshaaban@studentmail.darelsalam-u.edu.ly",
+                 "yousefwaleed@studentmail.darelsalam-u.edu.ly",
+                 "zainabalqatani@darelsalam-u.edu.ly"
+            ];
+            const password = "DSU20242025";
+            const emailInput = document.querySelector('input[type="email"]').value;
+            const passwordInput = document.querySelector('input[type="password"]').value;
+
+            if (emails.includes(emailInput) && passwordInput === password) {
+                alert("Login successful!");
+                window.location.href = "https://sites.google.com/view/library-dsu"; // التوجيه إلى الرابط
+            } else {
+                alert("Invalid email or password!");
+            }
+        }
+    </script>
+
+    <!-- استيراد أيقونات IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
